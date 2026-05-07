@@ -1,0 +1,53 @@
+{
+  "name": "crypto-slots-miniapp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\" \"npm:dev:bot\"",
+    "dev:api": "tsx watch apps/api/src/server.ts",
+    "dev:web": "vite --host 0.0.0.0 --port 5173",
+    "dev:bot": "tsx watch apps/bot/src/bot.ts",
+    "build": "npm run build:web && npm run build:api && npm run build:bot",
+    "build:web": "vite build",
+    "build:api": "tsc -p apps/api/tsconfig.json",
+    "build:bot": "tsc -p apps/bot/tsconfig.json",
+    "start:api": "node dist/api/server.js",
+    "start:bot": "node dist/bot/bot.js",
+    "simulate": "tsx scripts/simulate.ts",
+    "test": "vitest run",
+    "db:migrate": "tsx apps/api/src/db/migrate.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "better-sqlite3": "^11.7.0",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "framer-motion": "^11.18.2",
+    "helmet": "^8.0.0",
+    "lucide-react": "^0.468.0",
+    "nanoid": "^5.0.9",
+    "telegraf": "^4.16.3",
+    "tsx": "^4.19.2",
+    "vite": "^6.0.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

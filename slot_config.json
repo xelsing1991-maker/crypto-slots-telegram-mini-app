@@ -1,0 +1,18 @@
+{
+  "rtp_target": 92,
+  "reels": 3,
+  "lines": 1,
+  "bets": [10, 25, 50, 100, 250, 500],
+  "jackpot_multiplier": 1000,
+  "symbols": [
+    { "code": "MEME", "title": "Meme Coin", "icon": "/assets/meme.svg", "rarity": "common", "weight": 30, "payout": { "3": 9, "4": 5, "5": 15 } },
+    { "code": "DOGE", "title": "Dogecoin", "icon": "/assets/doge.svg", "rarity": "common", "weight": 25, "payout": { "3": 13, "4": 10, "5": 25 } },
+    { "code": "USDT", "title": "Tether", "icon": "/assets/usdt.svg", "rarity": "common", "weight": 20, "payout": { "3": 21, "4": 15, "5": 50 } },
+    { "code": "SOL", "title": "Solana", "icon": "/assets/sol.svg", "rarity": "rare", "weight": 15, "payout": { "3": 33, "4": 25, "5": 100 } },
+    { "code": "TON", "title": "Toncoin", "icon": "/assets/ton.svg", "rarity": "rare", "weight": 10, "payout": { "3": 43, "4": 40, "5": 150 } },
+    { "code": "ETH", "title": "Ethereum", "icon": "/assets/eth.svg", "rarity": "epic", "weight": 6, "payout": { "3": 62, "4": 60, "5": 250 } },
+    { "code": "BTC", "title": "Bitcoin", "icon": "/assets/btc.svg", "rarity": "legendary", "weight": 3, "payout": { "3": 105, "4": 100, "5": 500 } },
+    { "code": "WILD", "title": "Wild", "icon": "/assets/wild.svg", "rarity": "epic", "weight": 4 },
+    { "code": "BONUS", "title": "Bonus", "icon": "/assets/bonus.svg", "rarity": "legendary", "weight": 2 }
+  ]
+}

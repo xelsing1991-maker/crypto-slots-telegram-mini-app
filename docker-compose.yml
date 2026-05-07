@@ -1,0 +1,24 @@
+services:
+  api:
+    build: .
+    command: npm run start:api
+    env_file: .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+      - ./slot_config.json:/app/slot_config.json
+  web:
+    image: nginx:1.27-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./dist/web:/usr/share/nginx/html:ro
+    depends_on:
+      - api
+  bot:
+    build: .
+    command: npm run start:bot
+    env_file: .env
+    depends_on:
+      - api
